@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandy Shores INK – Tattoo studio</title>
+<meta name="description" content="Tattoo studio à Sandy Shores. Créations uniques, réalisées sur mesure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#E9DFC9; --sand2:#DCCFB2; --ink:#1A2A36; --red:#B3362B; --muted:#5B6670;
+  --head:'Alfa Slab One','Rockwell',Georgia,serif;
+  --body:'Work Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--sand);color:var(--ink);line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* Navigation */
+header{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--sand)}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.2rem;gap:1rem;flex-wrap:wrap}
+.logo{font-family:var(--head);font-size:1.3rem;text-decoration:none}
+nav ul{list-style:none;display:flex;gap:1.4rem;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover,nav a.on{color:#fff;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--red);text-decoration-thickness:3px}
+
+/* Pages */
+.page{display:none}
+.page.on{display:block}
+
+/* Hero */
+.hero{background:var(--ink);color:var(--sand);padding:clamp(3rem,10vw,7rem) 1.2rem;border-bottom:8px solid var(--red)}
+.hero-in{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero h1{font-family:var(--head);font-size:clamp(2.6rem,8vw,5.5rem);line-height:1;font-weight:400}
+.hero .slogan{font-size:1.4rem;margin:1.2rem 0 .4rem;font-style:italic}
+.hero p{max-width:46ch;opacity:.85}
+.btn{display:inline-block;margin-top:1.8rem;background:var(--red);color:#fff;padding:.85rem 1.6rem;border-radius:2px;text-decoration:none;font-weight:600}
+.btn:hover{background:#963024}
+.hero-img{aspect-ratio:4/5;border:3px solid var(--sand);background:
+  repeating-linear-gradient(45deg,transparent 0 14px,rgba(233,223,201,.07) 14px 15px);
+  display:grid;place-items:center;text-align:center;padding:1rem;font-size:.9rem;opacity:.9}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Sections */
+section{max-width:1100px;margin:auto;padding:4rem 1.2rem}
+h2{font-family:var(--head);font-weight:400;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.5rem}
+.styles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.styles div{border-top:4px solid var(--ink);padding-top:.8rem}
+.styles h3{font-size:1.15rem;margin-bottom:.3rem}
+.styles p{color:var(--muted)}
+
+/* Catalogue */
+.page-title{background:var(--sand2);padding:3rem 1.2rem}
+.page-title div{max-width:1100px;margin:auto}
+.zones{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.zones a{border:2px solid var(--ink);padding:.45rem 1rem;text-decoration:none;font-weight:500}
+.zones a:hover,.zones a.on{background:var(--ink);color:var(--sand)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.2rem}
+.card{background:#F4EDDC;border:2px solid var(--ink)}
+.card .ph{aspect-ratio:1;background:repeating-linear-gradient(45deg,var(--sand2) 0 12px,#d3c5a6 12px 13px);display:grid;place-items:center;color:var(--muted);font-size:.85rem}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.card div.t{padding:.8rem 1rem;display:flex;justify-content:space-between;gap:.5rem}
+.card b{font-weight:600}
+.empty{color:var(--muted)}
+
+footer{background:var(--ink);color:var(--sand);padding:2rem 1.2rem;text-align:center;font-size:.9rem}
+
+@media(max-width:760px){.hero-in{grid-template-columns:1fr}.hero-img{aspect-ratio:16/10}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Navigation principale">
+    <a class="logo" href="#accueil">Sandy Shores INK</a>
+    <ul>
+      <li><a href="#accueil" data-link="accueil">Accueil</a></li>
+      <li><a href="#catalogue" data-link="catalogue">Catalogue</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ACCUEIL -->
+<div class="page" id="accueil">
+  <div class="hero">
+    <div class="hero-in">
+      <div>
+        <h1>Sandy Shores INK</h1>
+        <p class="slogan">L'encre qui raconte ton histoire.</p>
+        <p>Tattoo studio à Sandy Shores. Créations uniques, réalisées sur mesure. Précision, hygiène et passion au service de ton projet.</p>
+        <a class="btn" href="#catalogue">Voir le catalogue</a>
+      </div>
+      <!-- Remplace le contenu par : <img src="ton-image.jpg" alt="Le studio"> -->
+      <div class="hero-img">Ton image principale ici</div>
+    </div>
+  </div>
+  <section>
+    <h2>Du minimaliste au réaliste</h2>
+    <div class="styles">
+      <div><h3>Minimaliste</h3><p>Traits fins, symboles simples, motifs discrets.</p></div>
+      <div><h3>Sur mesure</h3><p>Chaque création est dessinée pour toi, avec toi.</p></div>
+      <div><h3>Réaliste</h3><p>Portraits, ombres et détails travaillés avec précision.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- CATALOGUE -->
+<div class="page" id="catalogue">
+  <div class="page-title">
+    <div>
+      <h2 id="zone-title" style="margin:0">Catalogue</h2>
+      <nav class="zones" id="zones" aria-label="Zones du corps"></nav>
+    </div>
+  </div>
+  <section>
+    <div class="grid" id="grid"></div>
+  </section>
+</div>
+</main>
+
+<footer>© Sandy Shores INK – Tattoo studio à Sandy Shores</footer>
+
+<script>
+/* ===== À MODIFIER : tes tatouages par zone =====
+   Ajoute { nom, prix, img } ; "img" peut rester vide pour afficher un emplacement. */
+/* Tête : [nom, prix, identifiant d'image Google Sites] */
+const TETE = [
+["Papillon Tribal (F)","2 380 $","AMxu72t8NVDQwV5pIL78Ccob_gigmyVJ28s2IjTP-GBHj-duBZDfZRI3mYxnwQlVy9Txnlb_8bg4nUZkZ1vSJej81o0MoVoEFpDKHr4M1e9NChsYo1tQ-aLZxLxCYsqOOldPTNXtWSecUxB3lCm3m4cNnWTX_eCQ6dNpCucWjEAo8ZHZ97gqWGOxEfM5c5lV38MQp_Xp7XcEITRS9HniR-0-ZCwMwgbD4RYKa7_JlY2JD-s"],
+["Crâne de pirate (H)","","AMxu72tAlArshMwgbPXH-58HmTqwuFGsOTkSJ9SZP8Y62g0vZj3ajPATBwhUBpOyt7OBwO7WaW7TepLmHVNN_Eyb4kgdoBTjKw5xj4hXEaalrov_Y-UUakh4pslY6x0SdezLiqCrvELKcrtqYC9yQ79a1Ldt8Ai24Z9vdeRfDNPBRTT7RLL_LQcJIXOYYaVj8DTG-GpdKphblXWyX64-sccDKeOJI4fsvpJXeZRAhzNX"],
+["Surf LS (H)","","AMxu72uKNKFmsIEETjMny6Y3Vxz4Y6cMItqmjX_A54fMiVg9qT7G1H0mY8Fw9xG_6fSoE_87kotfkPs2nM8KZpEuPVJuLdf3IcT5fhItuUtjlZNC4JWyDkyILtbp8W0EHkXw2e_ehPhSS9EJYqB8ttKtyqy1Elx_LBf67OrVGEWuOqrkaLy8dnML8bsyU9z5DO6qqaFzzEyvcFqgHxwu6AX2Yx7DMjLhhOijhriQJhFntVw"],
+["Requin (H)","","AMxu72uv--pNH8SpuBp2DH9oX1nWm0MzJ-Y1zLxyd6dP1_FStF4ydXWc5NwgAq7k6f6OPtDGGv0naOPYFWmhqB4JizhG64HHjUMoEbT3VmjZKFjCl9EdfCiAEn_QRm1I6YXest4m5ynFJh1UhVCY7bA0eiaCMrljBs9gwcJr1PAE7Z6tDsGABj9RkZrwHQMKelF4ozOunf2zqFu55m8mhmbQNfZNRQLhXD7KaGpb127Fy7k"],
+["Petit Poisson","","AMxu72svmXdI7OagXqYJSvdSgT2VKIGNqcKytX1hvhoEECh60b3pmstoR0_W_-mtkVnsPSDsbLMEGBMVX_YzHYr_hHDINPXDsSLAMBlNi1CLvcFJUqIsFRJKkoMbznfSFwViUYYhiebr7hAH3SlqVOJHweXo5Jna6nbq9cw1jv4xClvdsPNT9NUJ49c2sFRBZDag1r_0RydjlNkwuY_jp8Vdudk-6DglD01_9OnQYCsFOhA"],
+["Surfs UP","","AMxu72tvp5BB0-ksOzIfnJF08WH5DT8UqR5C9niOCeG7G13IEyGHEHyuCeHrtufa5OKp7mHuDcoPwXNu-4J6zgL0BVq1WL9lG0FvUKJhWEtt48vj11G_7pGxmulaDq-EdhiccWNMXWMh5CRGdz-7C-j7Ckjyub9W76jKLirz0wPato7CMXmNnx7w_xv63jE6p_zksWYIDOiMLQOFpNrQJtV8ajLIu_cOMBaVQ6an7Ct0Nek"],
+["Papillon Tribal","2 380 $","AMxu72tAlArshMwgbPXH-58HmTqwuFGsOTkSJ9SZP8Y62g0vZj3ajPATBwhUBpOyt7OBwO7WaW7TepLmHVNN_Eyb4kgdoBTjKw5xj4hXEaalrov_Y-UUakh4pslY6x0SdezLiqCrvELKcrtqYC9yQ79a1Ldt8Ai24Z9vdeRfDNPBRTT7RLL_LQcJIXOYYaVj8DTG-GpdKphblXWyX64-sccDKeOJI4fsvpJXeZRAhzNX"],
+["Mygalomane","8 890 $","AMxu72vnprl3jhrSLVknOC38urRGZJ-jgS8MWd-RuOphPYBhCyvQASnByj-gp0UthVesK8WkzGoFnZYEwtLQlyUJmh0YOdWPD2DVPdxTDuCQUp55-IgKTw8bhE_jFEIrWzy951r_AcpebbrdGoUsN-DEl1ZWo90ZVg555aynTMrfXI837EHJwxJ3bTmBeoJ0tZUQkvLiSfPrqAUzfJjXMbqQkTANlZrfGazXXq2-r-aZsZY"],
+["Fuck The World","5 460 $","AMxu72v8Y9oexjOLAf84nEHmgPk-xxM37ybyM9qlPqAzG3Y-4Vz6L_uQcFKEwj0Vj3cGO04eaAooCo64tRMW_Iir6YrClK46S9X8XTTaZ315MsvkmX_4hY8qkle1BHLJW_HfWqTYYVp_5Dy2zE3tIzw2F2pUTI9whivFQ2D-QU6hAMLeltW8WHPyi6DMVv6mefRnqiOP01cPKDCTH3Elgd4YswGcSpKiOmV7IAzp5Xru"],
+["Western Stylisé","5 775 $","AMxu72tJs9u3sV3nFfRRG9udOEAzw1fmhOe9_tB6_s8b_x48pKROVFFIJFzrtJhgMqQ6UZMwVhMxT_cWnFLxGiAsK-wkT55qr0TauEtWx_ESPGeJOzHVUWSNIX7eCFHYaZpQvCtisVbs0Y1bCH_6CBHuQj38_Iu7TwJSQf5I6s48TElEC6druYgCsqgsiLEE4lzSrV4Fn4XcOjdDY9-fcuTW6_JVQQl1q_PMEX20bMDEq1k"],
+["Logo Val-De-Grâce (F)","2 660 $","AMxu72t6mLJEG9DxPurZK88LzLAls8ApFq3ie04xaj9QPDmH8JssJU_UbCFv38aQRM8uLqbXBSVQWRLPhyS4CdOzfJLZbU2Dn_fa58Hodz-BoVMrcMxJ2A4MEvTlxTj6tDlZYwtSBV3Y-sGiHKRtyrkwJkSl1dsVogN-G0qw3VZIE9jb0KS6tekCAzev5pWHj-_sPIuyMNCi4CSZ7GS9vFQRmeRmISVgHCnUQkC65j76"],
+["Rose De Billets (F)","3 500 $","AMxu72ulxFj_9B56gdWO-esqa_ztYUtCduDiR3aA2gHZmb0_oRvZT02roNAs3g9g2U2fn1pIY6DMj1BVVpcwFAB158q-itBeetM4iDoOYM9zuYCcp8HZXGupffmAJq2HzyydqNQbXj7AsfT4eiQOxRw2OD5hrZvs9RWF8XtGN8CEOw9rv0FUlMAz2cS4duUzIuuX6kUXXp-Qpcz35M1_Unl70KUCBZHvCvIwmsLpQ1EXaUI"],
+["Le Cash Est Roi (H)","","AMxu72s5G9-G7YSBqJDOjsE3IMMpRrxbZOqqhDexsQOhgSFOnnM2E_w_kG6GLJYV6ufBXfWj7AWADnAEWoCoaUIR7aaOeH_JW98_faOfyg5blbSgZ598r5SaIM8OkPE4MbMcUvsSHrcLiOkenv_bB2x3chB2bjhDH_NFIO2JbXwQRFx2ny-m2rqRHWA9dZTgM4bmnrYZSa6ALiMECz0CMen0NnBNo1W0ZtrY506ifsWj"],
+["Symbole de Dollar - Gras (H)","","AMxu72u83dlNoX3nLf7lU20Ip-J1Qu0VOKYEqF2vNu3jfcm0ZDHO2knFPh9KD0YqXFy3ITrsHbcRZi_9SZHw8noKT9cIwlHgNe3FDF4rKt0FJppIymixauX_upHij5cPP90_IEK0HT0GRhgt1onyTXES0qpFNcqDbtlEJ41s8jfo_vG3SWGa83SVEa3h_8mc2d03ljYXZ96Gnq9yWyZ4mTMR3ZTeylLWmlWxU0Be2x8tORU"],
+["Symbole de Dollar - Italique (H)","","AMxu72uRp9pJmFH6xTfalcY9DASn4GJQu4g_avrd_xOvfXHmclmX8aDPS4fhnxZ-ofAanSYb0_C2hnMyTao7-9okYwH7FaixX4ACZ0tIpQ2oj0TZO64PqnONKfY5OESleQHKQmpjVtDuEMNNnFSTxz8lWe0_Zmlv6WT2zj-2MBLEy2MEszgaRPT1fOEmL-nMM6jFQUT2joOFD6W4j_FGOKjc5x5HWge833gD95XNkAp6jqM"],
+["100 $ (H)","","AMxu72scW2Ev3buw3m_OoyOK_QoGbdtxTztjyOt3bremPbryZs9dFgTiR-II-Hmq0HofWY70w34E8xU6gNN6t3QK-IUwAYc8cN62oiQySeY4ceB0OzRNZR3pOkz1qWi8rI089DE8OjX275ak33qOjTnG5xLf96wWc8bIDyktTfSYHM4cpKJsPnx3gCuJgYiXeIgFDE6jFq87Fah33cO0SL8DdEQxJ0RNFxmJvR4fujNSGo4"],
+["Los Muertos","5 530 $","AMxu72u54E_AGcwpzqKi7D64MEOKteM-pADeaCUXy4jgUbk2i0mwKGDpAA81Hnp6CN_VTF_61prdHw_4wxr0NaEsTF_98haLhyXWjJFUxb4SMbjzkeoFMSD4IZ5AQvILFtc5YC7nr0s9bPa1EnQX8AtmX6EXwoiVft40d5e52AFpncxmQ6CbID5Jke8g35g0JJoBG5n9ZZ8QxXXjQ7HZMZzQ0K5YzjMGwJeUrAIz13jzZsg"],
+["Tête De Serpent (contour)","2 940 $","AMxu72sJyxPb5cie51gEk8ev3j8xTT8W2dBya5h6Yy73wkh2FKBVV25c9-wV8PYO3BPWK12FUzhL2h9L81HJJzYobHGjVAfxJETiZKljwv_iwxBMnnurjeICEo6OgLtzuo1LNrQNQXsZUFJOaW1xY1dQ0gKhlYL1Wyon-fEJ8gliLCnKRKR-tKIOtcVyEAvzpH2SLVwV3CGOABMaq-jVp8fEX97ZUbhMcSVlQoZOcLGm9Fo"],
+["Tête De Serpent (couleur)","6 440 $","AMxu72vg3fR1ak-Y1-MOhBJvHmPkpTkgiojld6tNi7IWCLdthsv4UFR5Qu8rCgwLD_3mV-v_jRJuEyJrV1UtHdur74hXg7xqEBoaLLJvF9G8MyvBaHBE86H0OaZzXOJNcLGGLC5Caz4VRqB4rKJQWxUacqt1XKIHaw-ZLYBc3rI_DkpZqNnakVGU-kQstGXmx1pxHUglJQ5QMsS4CiKraUmZuPh7FTktO9w4fYKLCc_59Nc"],
+["Beauté Fatale","4 410 $","AMxu72sArnPRvBQYrEuAfekEA0ZEJ4Ut7FaBG51LE27Ia9nAkstnAV-YR2m5CaNWUNSjJlZ0vfPKaU0wC9ydlALMTCnZf1nJzCLhSgnE3-tKhww3cypiFTFauo9Te7G_38NNaadKTYox-yeRCplpdHWaNGP4o8FBRBX8SIaa-hseeTtBvYQrSxvJUm-p3jYSyI2BsTW8udRWRf4KT9RZChwXrKnEJ6i8CZPhsekewIRTVEA"],
+["Armé Jusqu'aux Dents","12 250 $","AMxu72vLjzIQUwShovdY4DN2pe12jquJ49cN9qj212yIBIlF3wfN69u2SUDWoYODe2pPI-psrb-DVlO8MGgFbxtRT7jeQqpDm1kJPaAAtLGs5RoD925xZtAMOrtnqlkMiC7o2AegUGGbyghjlaX2Sskk0yeXW_FEIxjn1AqNB0emI564k7eJ9hAvJlAuememwUZOIeRXru80OofjFqfGG7H0QL2t2iFNui54aG6RswOc"],
+["Bel Œil","10 430 $","AMxu72upQ5oR4y6jmvxWgjRY7QbP667P0lkCAs0j_AIdsM6xKP0JkCOksTzozVb0UNH9LsqDnhbwtep4fpQSuGY6Q1PtpS7Zc_onwlu4m1TpkLWaAx3sFxT7HOqCC6FsJQI8FT9ZXodQyRqp3j0hWLJ7G-fi-JzoO_X7jOkgpfqe4xdvO4_acovs-p4O7b1hmKQgbYtg3OIo4vr2FBHnZVsYPCGWAkLn-K6WMfophQ"],
+["Renard géométrique","10 990 $","AMxu72uEaP8oEIrAg8XPEsK9uJ14HYAYlZagAoPPKzJoZ-kNFhoUnyjmfkgdKRJ_FrSy5Tvopp-TX4tQhOAC-YNe6tkJYGHyJZsEg3gowvsbzEhFGzrJCNrq7sOrlaqygqnPNgQDQD8his79uq2H-L-10j3jJpr8AeoX-i0NycnU7UA0lUKbkIuGp-w6gje4mbre3cH8XrDFUj4OAZF8OtWMP-6vW6MvAiomyL_0XSvMGuQ"],
+["Pécheur","11 354 $","AMxu72sIKowO4JAM72L8ZYvdN3a9vJ_LsUfjYEx1aH9wTKN9XSdQmo5b4trfTPJmmrUeaekuU71DXfVWKxA9kMQXglxWvo8K4onZAOuJ9aAAHBWpPGGrQ_vfrdFDS0rAsJLJzSay4PXjQhA9bGVP6JYZRC-PFcR0pfd784ZUVjcISF2PxVI4tE6Z8lPPX935zLoLWoK0IpS220ELqvo4Zg1QQrjyQkF8RJR84T12zvoK"],
+["Voleur","15 008 $","AMxu72tDFJ82i9Ocmg8nsPqDF92B56ipUZESVtGOvFL7JrNHRh3dUuxgtzzlRP7nmwkLNLU6fEF2IaKljuEM66RBr-_yeY6DvUJMsrPhbE8i3eRf4i3mLzyUOkgcQAbDxKrt7BiIodOJXR3hN9qJKW7B8FAlNGplF0TX2hazagjLcZ4flpdoDA8MJhkPmuG_uHriPslGse0EVbPPspvZnQa7FjxzMfq540xz7irRU__BL0I"],
+["Crâne casse-cou","6 790 $","AMxu72scRcjH_PmKuWyV4SR0moGwc1aybjqQsMlViikNmmRgFlPhk43Y_n6GHQSE3t1XFZeB5TeGhwNAwZOT_OjVrl3FFGk2B4XLe5WVpOjjiM8esXLwscx58xZFOtqOsVF7byw9KG1n10pOQcpt9-G9K3uQQ3_tSlpykeTU0QzJcUPkjiHcBkebQZ0gmZhWUYkBBOOHVs79dwrEgYn5sTBl59mNxmtwITUzqMENo4TQ"],
+["Scorpion","8 890 $","AMxu72t-oOM_5IXGdKIkr1AEs5M5NQeUdFUOOtR1UjzNWEtH65pohHNoKqKjWLIDeTRRjKMccPrR4lC7OIJ5-IJdQMIJCB5XgAtCgI8Mrjnr9dclW-McTYaNxQQB6-5QN-zOpQjDGUfEurXzu-mbJsGvsg75oYYJTCgAJqq5ippYpnKh-nK1ilUq4HToXRCKKkpOOcse2nOMnazz1hdjVbpvg66YXeiCtar9hWZ588BLSWM"],
+["Araignée Toxique","8 260 $","AMxu72snXUOgkUUWHOsYEVow9p4iBZZP_BolAH5P6txZvhocBpkHWUi7WwjgD2AlBtvm9IgQUU2WGJA9gg19obD4siqTrkaX_Gn4Mf2BbVlb39YLwU9IYucpE9V8kssxMITqQ7WDfX_cl8gXHs_Ih3QIiXm4N08aqDmj55__ZfEE647VEIfmusL73FZKHiZ-iZCL6nvg6OoYYOcLwIJZfDy3igd5iddsZ2JmALObofvMUyQ"],
+["Roue Voilée","5 320 $","AMxu72tObkMggkGuVlqxnxxVzImWKlrT-4WPz6bxu_tQYXl65qg3sIENbhO9VTKv2fO2TsNgE_KLLDoDj48MN_Mcpxs3TJVzOHCJWhVFmIbnv0PMllxsYDmTx6QMa9klFH7NXeBPeLCbnUYV-2tAf1wB4GcikG2nxVmwhLCsAexq8Qa4P7ANao8CqsRWaZqsTAPA9CvLXFzfbJ0rn4_Wubzx53dqq0MlLa1WMZswWHJWpH8"],
+["Le Feu Au Quad","5 810 $","AMxu72tTLQhxv08oxOJ3yEph2H2lTo_DwhVtI5x-xIcJEsFnoNCe6-_JvSplRa9OgCkGs_zyrNIAeaYU6j0gdl7glZqskCHdPNjwxkOmQA0hLx10euZK8IHYxZFQ-OATjkUboDSTEY8Sy5lCTgcOsC4z_PNfZUdoTAE1zk8HSU22S5BXHa74sXVXrQM4vtgVJrPo6s8gInNjvMdWFhooVGuZ2IMsu7ZkRbDBMb4cXsNmy7Q"],
+["TAT_FM_008","24 000 $","AMxu72uzL9E1FXKQ6ZjBroyT0r69xFJb5CcyTIjaGr0M5DxubArQza8fFh9833ft2BRFxI4BDPSYOJUGqZrWtUnFUIPX943Qp97ApxAlG8Xq4A0vF4Z3cFMpomEz92Xcmwp1UE7O_Bw5luHYZHC6P8y1OZp9WLPXUT3qX6r4SIvMqDMMVOOFt2ur-VYfmIFgHRKbyKl3NmNwBDZHBrRoGcu1mGi83dtt0aFQ7Kz7rwa6MDw"],
+["Cinq étoiles","3 500 $","AMxu72tBxR_0uIM7MGSUlnfmL-K2vOdAm63aaQG9nb74EtIA3_EzWueISIos826-G_od12hDQc4gkzFYvg00Atugsv1VhnyWotcwsIPZZeqJC-_6ZkIJy-arpVKnArRxI3OnxR2F2lDbM48zuBQmxMEAFHlZJJ_w2-BoBTCMBR_jXCx--QMuMGFQ7ztBCJvqqYuhpb3FQvPZYzoIisah5SBNF2NMac7wzDptXauKbZaYGw8"],
+["As De Pique","3 500 $","AMxu72voP_57hELAHfNyucUtcYKHofGP3bBFLBx_RBe50LUwEooyXBUzR0Qhm7Kjb5GHlRr5KNoVZE8SS0-sdK_fKmR_Lh0hQBLh13zprAkWnsdOcP6mN-Xh6rOv0rEhNKpbW4Kych5C-sky_Reen2VBdyi-DLLYBzcPs3MO7fjDk4jGOhMKHiuDNDFCOGoF_uCtUhCEuUzF6o-d8Q87HPpnlVhe-f9VEJARDijS71pM"],
+["Animal","3 500 $","AMxu72tTfY4XCRLVhdRR_Mot3L6PWARe_CC07CQCmqpQJyWC_Bwop0t-jxWf839Vdna6jQtf3r7SuWVbAuUb5QzSt5VtBcNsjE2z4BcJUybbE0xYiusxWxjzhAPa_5zzct3LibCBR4bUtpVhRhBVlLXKu9MrxouioBxFdnmydmjAaDcZ2lIniKPjn--34GVe02ElR6VqUTEMaisqwVoDykuBQmWDoNsqU13srsDgGDLaVGw"],
+["Fusil D'assaut","3 500 $","AMxu72s4Q7JwbiKlfeqtrTWN-1OJx671WE-qgTPdiqQi5HpdvvLstsR6AflO1YYXJgtgKX-jBI2QX3959WEn_GxafTO6IDQVyjEAnYJO_Y9YYvpaU5s7jc8hGLQeUMobY2rWu-xRBuga_KFQq-rGK1iQIfsVn3afTY4pLBH_dP5jdz9-5vcmSOHkRggXZRgtX9ub6pGGua2z5hWGoYi49x8FV7usVLlWzDwMdOnKYZHWYOk"],
+["Pansement","3 500 $","AMxu72ssvfw_fmlLKgY-RND1Jhj2PuoiYu4BCVS6FOm5N0edV8Lw-D2IJAwqvSn5KPdOMq_l3dPcGm0dwnhVaaN0mjAw5yuluQkNA0bkdAgzuW7bUnEZUij4IaEC9IjIaIA8EHWipC860KoeAo8R-lXVc1gSGG-8Msnq6eAS4z1LDaBt4hQd-rDSBhNB0TeWvzcncbTCi8-I57w9P10jdMZA1n7HGEN2SjDM6V4Jtc2w"],
+["Larmes De Pique","3 500 $","AMxu72vxgEw6NRZP86koIcO6BzEkpfeWYkBFL7DI995cCFg8EliOmMzm71CQqEnETlccawDAHDZlnaQnwNUuf5Yp3GzsshDmBFw0t08JKG0IS9Z3ZjUPHGFs6U8LnlcUQAfs7YCWe2Z_KuMNF0aXtQa89XqY5Mc8dC3XamrVZucTuA9dfOXgngVolkAZ5qMFNkm-2Yh1E5_OwT0B9T-ydBvjR435xHH8elKF25-ESDm-Oto"],
+["Couronne","3 500 $","AMxu72uPwaSO6OtY9bBnFshbVP4tU3-CD4J3gvd4UYHvc4E-eWtiYirc075_MwYrdSSZKRQYjynhbGhFDfjFhC_JXjShp_hKOJPK2qxDVqm0oOZSlqe-JjYD1RRuuV3sHCT7DU7hNNDWbfGfr9xg-_sw6cgW4kV3Mh0ic37QO_k-BTFkw9dJCRRRtRHq_3NNxHlw20ei2Ce5k7b-ROUFvBn5zAQTPz4VrWerb1ep3j4jYY4"],
+["Deux Cornes","3 500 $","AMxu72tdvsqCrKPu-PSjN47aamca_4Ip9bsg7l1LtHFP55B7pLhqgy96OpdR5OsAbjWcoI-VrmTYIFFiZSILi30YODJafcwGYxxof0Rv8hiwrerkkSJ_xYDIY5-xTCOOVoPsjlRHkFEukD3zX4SUQ1Pu08pn5wKxFmQD7U46GPm4RapH6l_S13kwodRcPb0CS3mkrRtweyBsDtboyrKhO21WTZmqQPSC9JiurzTiN0zX"],
+["Cornéclair","3 500 $","AMxu72sY7O8seHIh2ViYb7MzZ5OGSxDelaODZB3g0l3wTu8OeXlxcG85uHPK38AA5KqJ_jMqhP9aqZO-eFHKSFfnbre-XvIUYfz5jQHuZzv2QeOT4H6S6YLPJyv4pET3PmBIhgRdg_ajWlbnl3C2hgTLPliYQ4vcS-SNnhkd0mefF2kaxYxuDbVfnijg0Fy02nAjhEFn3RrfY22yUi8g1RzFwbwOKXhoY6UX3sC5I3-hZYo"],
+["Poignardé","3 500 $","AMxu72snTnYHp91eiblhZuvGOqNZDLX_jieDmOsrLWjFuXMspQo1D_62o7lAlO1n9JIsU25saeZA30NFrnbHHZi5-xJnwzvTUC70DRzTN71hH3RZ-VGmaG0ZPJ2fvXRDiFoyBPBuetLrSoSpcWyBWDNUYH5IBLefJ5e9QZbOqRkhA8KxgveLTxONZxrr5PUR71_5o4bqvY5QIZvoP7A2mFacakm50NmdozIp3CNs2sba"],
+["Feuille Verte","3 500 $","AMxu72syFmSA7RNoM9VgAaOctN9PIq3_k03WssPsgKSaE6S5UrxrjcQZdS3jckrSWPVBv3JwlcHw6AuPp1zCfKbm3aeFo3metGC6n2U78w7WCFxsv3yvg4c4K-ZX1Sw7kG5vqzK1Ve-7Zhm7v_2zBgK1hOptWm8rffOinGMjBiY1IfgZx-CCg32hkzq1ZI1N3f8L1ajutJkdTiigGDGG8qEXAgRFCEfdthtGPs07yJ0e8Ec"],
+["Baiser volé","3 500 $","AMxu72tWZY1cjc9XxLeD-eh6zIi6uBd78JrpAdM9cSW_Ls7EYuxkm4GoIJ17Nf6RRraAiDZrHuHuyfDnLgCQ5WT4QUYMVGCj85FK51kowq5wqYiQVE0OuKNJwa-dCQSKwe6SrDRPt1swhFumfGwwTfboNX4KGdYsy6LxKFbnwMUy0TQ3PVN-HLiay5jm797f3VigqNs2Vvno6eKBY3MO1zjls5O7jMeHqZiF_XMb3uzgxTw"],
+["Sorbet Rasoir","3 500 $","AMxu72uXzjjy185HFVGqznGRvQCQ9WQ5Fd-KamEKCk6cEEPt91IKZIwnN3e_Ydvd24lkVQiRGPI1ShOsgLXPWRpwPl-ssP3qwPSuiOPJy8E6Y0HzXr3akLz6bDC5ovFyKDaBwY7RJMedzMzkBbNlp7oQxcM5c2LeLMw7ZUJn2J35BVuPKaK-aDcFcy-8sfHWx12VI24YlrPn8lrsQhMEio_d5lcgJoSUYjtmNcgkAYHCjUk"],
+["Etoile LS","3 500 $","AMxu72sTWG1gD59sGu62jiW8wQXqQo8eXiTab3PHfUzgxWisurWC69HrNe1ItKtA6ESwDA1EKFDkjS9PjRijN12EiM-CxJ3ll9OjUDOHRkIH8GBC9QWeBLD59LN0BvDlW2Qo-O43-4mf6Xk3OJpNP3A3O-z2uXkPQnWQp7b9DFDTqLCmDnFw930rasiVP41rdepxto0JjfLXj3nzJQbxNjSir5Ngkx7NYtjEm4sCAw"],
+["Ailes LS","3 500 $","AMxu72tU4K9Jg38g0vrVDl4NVh_9MDfZdf9wjep0-KwOZdnHzInU5PaD1rKzSYlBmz22KXeXEsI2mhKlBMSE4Aaz96OPvLI504EqOfILmJXJFC6ZAHPLa-87qMbaQoVCa8xGgln2cbbgpnt-eTQ3rQqLZk8j-fkd51QSOLgz4-vLVsSNKdgHB-NKrK3DRC-tGSQLVeMfgRmLwRjr1IIfgFhO6MWv7JYTby7VqEAa1z8s0TA"],
+["Marche/Arrêt","3 500 $","AMxu72spsNDxoIZdzG191ggJc6HQQ45nG4nIL_xY_Rt-lVsehcCUXp1saVv3r0yd1Cco2oDJEUVYa_uV2FWHKQR7qjV_F7tJY3sbKwVFBaCSQMTVEGZcbh0sm1d3UpX8eLrwZKyPxkQK-H6aXwv1OGTAnMagyY2jtlCalVrlFwwKlxvKn1WIOhcTE6hTgwC-Hqd5RCmBzaLQm0Fq6dKmV3PfXuNpbpkCt3k3htNuoSkLrRE"],
+["Fatigué","3 500 $","AMxu72vWCC8kdvMd3lHRa7U7ntfByGFeGCSiwtvo-UcJOi_4dgX3BzuaGPLrl5Kip9SeuMYzG3QDY72NEw0bYO1iTel8c6cgJKhrQY7FQjLPQvAmVHr-FEP2LO7IAgUGvtyNq_-pumadTQ-jon_WB3J2OtvY7_73K19sSdbiie4KcBYImWKbNZEQMdvyfdFrvQUggE4HSXiHMBecYXljMWQMM_NUqZGCQePLu62DKAIsEuU"],
+["Singe De L'espace","3 500 $","AMxu72t-5vHugQpZRWViRv6J0R0akLN3vKEf-bFME53ey50azT3Rr4ljC42DVBoTZW6yFc6IQIeXFKL9ZuHzQLNdSgV4lr83RYLB9TK4DeNkEjpQc4uXH0LfOEHpHD6Qtf7gqlcYXOwuJ9S1XRL3S2qnd37K9-cHDHzeLCDJL2XRF5Qhj1AHU4MgDH4glM0rHjCGaVutz1qgwHLIpmxclo4FR8kCjIeSfxItOrYQ97C1ETQ"],
+["TG","3 500 $","AMxu72sqEk98EfxP7HWa9Pjn-0FGhhp7D1eV99-hBS_7wtkWMbq0dxrnC8zYrkOSUee_EUBPNhlCJXi4Wsr2yWty716CS0V8ttGAMuRGazKey0hHvBvT2DcYxJO9xCUT1XilmMtho-pRFvwDMzrKFquMBv-hWwSO3GWvweB6JEjpn2pLPypT5g4LPrXXrxHPw1EAoZN6svL_sw7zqaLI3TRmxVlDAjoULqYS1QqZMdor4io"],
+["Ourson","3 500 $","AMxu72uHRi3KPnv--ZxfrhXj3AazJiPOAbR73TRVTPf-i933lepXaXFt_qaKIpkhQWMfzNMCWdsq8aTmzquSFFyPKHn-eDT8bfjSKyRdSJMyqQh4NOUECfNoYcRrNJcFggQugbnK2LN32zNK1qaQt6EyeS0k_oCXWNgCV5ryyHIiETLWLXGoTyzBn3DDExtmHGHX5ypoxt7H6pGhWtxKYeiDwPuw63_1HDJcKOylYw"],
+["OVNI","3 500 $","AMxu72sCDGmziwVXN0_Q73v3lS456q0HnIO9XDisEi8-H9ANLgzJoaeKZDV7FLK2u8ilcVgOXOTgLJIjJUkAvCYRsoIsfgce-Y91ioED2N6CZJURiHj923iVyuc5oLGvMamfBWvgqSRsq9RFVMj963MlQ8KYQc-UygspCRBgOJR9W9JHbPymaegPzHTkU9tx4aCR8l4xnW7zUjCBRgUNamhxrJX1RDvEnRcBRDF8Z4X-hQA"],
+["Recherché","3 500 $","AMxu72vn7UbOui8w1rBah5PQ35kjFNgGioRjLrA-VG_7KFhtSvOdMVnfE1vdnOLpOrjS2iba77VgR7reY3-eYDiOJ5wQa_Dbqk-sWbBoLB16HmB0IHD105KXfgymLPAnzE_Lck8r2yBL_ic5_EY3GkrP_pUC9pr9QlTnOciqLqkY6cU3BSWiiYv8Mr3QmEFF_GdLCrbry0VI2fBigO_N70s5_KQmaJWWn6koagHqVqKrf3g"],
+["L'épée De Thog","3 500 $","AMxu72vRNl9hYg2Lh6JgJcBclYxzVGkw_orsuJk8MvUFUIf9qzmi9UDordlMnTYjkmY9f2kHd1wZAAKGqjTnHWjkvprUaNc-W2k_1o8OGcI0ufihzN94Ukod2W-cv-Of3bhCsEwm0rBJyfQXREKvDrrJlFjS0IyVOcSv0XZsqVNmicvDKALRLdUvpvNut2S6VtebEXdeKwa-h7UPoP0SkcOv2FDiHuJ81Gyfen0Q_p_D"],
+["Larmes De Cœur","3 500 $","AMxu72uDzUu9n9yty3wN6ZOcwiQ-jfkdLxs7eWfvhAOoqSeQp_Os2i2AJ6RK9Rn7ju6zBzNFIW0VOEvaaqJqhUUcok7jTGV-kC8SkLgzWUV8u9fTPdPkk7v1lwBGNlzpD4TAEpikO8-CSq3FOWaTKGfgCalDel1rVZt5_YacNVhu17HtNKPpzbOHCzwFj1pZ-rZTwcoRKxZn9k9MT85m_vHtCtIe3wkEpHHA8P-G0ZaAwNc"],
+["Larmes de Carreau","3 500 $","AMxu72tExsKRRT1uvipc3m6xdPvsk2CFHFIrNC0-RDbcBbSVa3S5van7IpIM-P76euntGv3GBikzsHB6ZvfAuyUpEZkiy_dBmxhYYsBYl6i706NqvE-d-YJ7OYfkCFUcFa5FrBV2mGsEaXdJJtzgr5GAXh4WE-YPnIsii4K30vxJ_GSLjVZ7dIsrKJiIlumiJ9MDBm-xwqimK-3XJnBJ4vYdp5jCtq0-UM_4DXLlRJAXXy4"],
+["Larmes de Trèfle","3 500 $","AMxu72sdhp0e7c_QtlUcCZFHXECzq7EpPsWMJOlcpcfhRs09R8-qKxQzHMw_YQzC7qETnscPQeYUzbVQubQLiqzsMZz02HhV_GuOFZWPmpjTdCBou2ryJBtDfdF-kmX7U0HYOxVTWne3p1H77h3-OPZ7rDH6cAme7yPRQXYUrtcd4SRTdkGXC4rG1lYI6FSUMXuUsFnbAA7asCuG4fNrkr10hfkEMhEP1S4ZZaSgFLDXz6Q"]
+].map(([nom,prix,img]) => ({nom, prix, img}));
+
+const ZONES = {
+  "tout":           { label: "Tout",          items: [] },
+  "tete":           { label: "Tête",          items: TETE },
+  "torse-dos":      { label: "Torse / Dos",   items: [{nom:"Exemple torse", prix:"900 $", img:""}] },
+  "bras-droit":     { label: "Bras droit",    items: [{nom:"Exemple bras", prix:"600 $", img:""}] },
+  "bras-gauche":    { label: "Bras gauche",   items: [{nom:"Exemple bras", prix:"600 $", img:""}] },
+  "jambe-droite":   { label: "Jambe droite",  items: [{nom:"Exemple jambe", prix:"700 $", img:""}] },
+  "jambe-gauche":   { label: "Jambe gauche",  items: [{nom:"Exemple jambe", prix:"700 $", img:""}] }
+};
+ZONES.tout.items = Object.entries(ZONES).filter(([k])=>k!=="tout").flatMap(([,z])=>z.items);
+
+const pages = ["accueil","catalogue"];
+const zonesNav = document.getElementById("zones");
+const grid = document.getElementById("grid");
+
+const imgUrl = v => /^https?:/.test(v) ? v : "https://sites.google.com/u/0/sitesv-images-rt/" + v + "=w640";
+
+function renderCatalogue(zone){
+  const z = ZONES[zone] || ZONES.tout;
+  document.getElementById("zone-title").textContent = zone==="tout" ? "Catalogue" : "Catalogue – " + z.label;
+  zonesNav.innerHTML = Object.entries(ZONES).map(([k,v]) =>
+    `<a href="#catalogue/${k}" class="${k===zone?'on':''}">${v.label}</a>`).join("");
+  grid.innerHTML = z.items.length ? z.items.map(i => `
+    <article class="card">
+      ${i.img ? `<img src="${imgUrl(i.img)}" alt="${i.nom}" loading="lazy" referrerpolicy="no-referrer">` : `<div class="ph">Image</div>`}
+      <div class="t"><b>${i.nom}</b>${i.prix ? `<span>${i.prix}</span>` : ""}</div>
+    </article>`).join("") : `<p class="empty">Aucun tatouage dans cette zone pour le moment.</p>`;
+}
+
+function route(){
+  const [page, zone] = (location.hash.slice(1) || "accueil").split("/");
+  const p = pages.includes(page) ? page : "accueil";
+  pages.forEach(id => document.getElementById(id).classList.toggle("on", id===p));
+  document.querySelectorAll("[data-link]").forEach(a => a.classList.toggle("on", a.dataset.link===p));
+  if(p==="catalogue") renderCatalogue(zone || "tout");
+  window.scrollTo(0,0);
+}
+addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
